@@ -6,11 +6,11 @@
 /*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:34:29 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/25 13:35:20 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/26 22:22:10 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "so_long.h"
+#include "so_long.h"
 
 void	mlx_sprite(drawing_map *draw)
 {

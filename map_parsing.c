@@ -6,12 +6,11 @@
 /*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 20:18:09 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/24 12:22:50 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/26 20:07:51 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
 
 static void	*ft_memzero(size_t size)
 {
@@ -80,38 +79,40 @@ char	**ft_split(char const *s, char c)
 	splited[j] = NULL;
 	return (splited);
 }
-char    *read_file(char *file_name)
+
+char	*read_file(char *file_name)
 {
-    char    *line;
-    char    *map;
-    char    *buffer;
-    int fd;
-    int byte; 
-    fd = open(file_name, O_RDONLY);
-    buffer = (char *)malloc(sizeof(char) * 5000);
-    if (!buffer)
-        return (NULL);
-    byte = read(fd, buffer, 5000);
-    if (byte <= 0)
-    {
-        free(buffer);
-        return (NULL);
-    }
-    buffer[byte] = '\0';
-    map = ft_strdup(buffer);
-    free(buffer);
-    close(fd);
-    return (map);
+	char	*line;
+	char	*map;
+	char	*buffer;
+	int		fd;
+	int		byte;
+
+	fd = open(file_name, O_RDONLY);
+	buffer = (char *)malloc(sizeof(char) * 5000);
+	if (!buffer)
+		return (NULL);
+	byte = read(fd, buffer, 5000);
+	if (byte <= 0)
+	{
+		free(buffer);
+		return (NULL);
+	}
+	buffer[byte] = '\0';
+	map = ft_strdup(buffer);
+	free(buffer);
+	close(fd);
+	return (map);
 }
 
-char    **get_map(char *file_name)
+char	**get_map(char *file_name)
 {
-    int len;
-    char *tab;
-    char **map;
+	int		len;
+	char	*tab;
+	char	**map;
 
-    tab = read_file(file_name);
-    map = ft_split(tab, '\n');
-    free(tab);
-    return (map);
+	tab = read_file(file_name);
+	map = ft_split(tab, '\n');
+	free(tab);
+	return (map);
 }
