@@ -6,12 +6,11 @@
 /*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:02:07 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/27 03:03:45 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/27 03:07:48 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
 
 void	ft_init(drawing_map *draw, char **map)
 {

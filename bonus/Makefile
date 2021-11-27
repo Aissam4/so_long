@@ -6,7 +6,7 @@
 #    By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:27:23 by abarchil          #+#    #+#              #
-#    Updated: 2021/11/27 01:40:34 by abarchil         ###   ########.fr        #
+#    Updated: 2021/11/27 03:12:56 by abarchil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ FLAG = gcc -lmlx -framework OpenGL -framework AppKit
 CC = cc
 OBJ = $(SRC_FILE;.c=.o)
 
-
 all : $(NAME)
 
 %.o : %.c
@@ -24,5 +23,10 @@ all : $(NAME)
 
 $(NAME) :	$(OBJ)
 	$(FLAG) $(SRC_FILE) -o $(NAME)
+clean :
+	rm $(NAME)
 
 
+re : fclean all
+
+.PHONY : all clean fclean re

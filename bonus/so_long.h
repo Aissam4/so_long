@@ -6,7 +6,7 @@
 /*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 20:15:01 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/25 13:33:52 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/27 03:10:29 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <mlx.h>
 # include <fcntl.h>
 # include "gnl/get_next_line.h"
-# include "libft/libft.h"
 # define PIXEL 30
 typedef struct drawing_win_floor_wall
 {

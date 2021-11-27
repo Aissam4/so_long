@@ -6,7 +6,7 @@
 /*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 08:29:49 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/26 22:56:30 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/27 03:21:24 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,12 @@ void	ft_draw_collectible(char **map, char *mlx, char *mlx_window, \
 		j++;
 	}
 }
-/*
-void    ft_draw_player(drawing_map *draw)
-{
-	mlx_put_image_to_window(draw->mlx, draw->mlx_window, draw->Player, PIXEL * draw->posy, PIXEL * draw->posx);
-	return ;
-}
-*/
-void    ft_draw_end_point(char **map, char *mlx, \
+
+void	ft_draw_end_point(char **map, char *mlx, \
 		char *mlx_window, char *end_point)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -106,10 +100,11 @@ void    ft_draw_end_point(char **map, char *mlx, \
 	}
 }
 
-void    ft_draw_enemy(char **map, char *mlx, char *mlx_window, char *enemy)
+void	ft_draw_enemy(char **map, char *mlx, \
+		char *mlx_window, char *enemy)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 20:45:08 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/26 22:57:40 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/27 03:22:11 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,9 @@ void	find_collectible(drawing_map *draw)
 	}
 }
 
-void    ft_draw_player(drawing_map *draw)
+void	ft_draw_player(drawing_map *draw)
 {
-	mlx_put_image_to_window(draw->mlx, draw->mlx_window, draw->Player, PIXEL * draw->posy, PIXEL * draw->posx);
+	mlx_put_image_to_window(draw->mlx, draw->mlx_window, draw->Player, \
+			PIXEL * draw->posy, PIXEL * draw->posx);
 	return ;
 }
