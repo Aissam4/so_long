@@ -6,27 +6,33 @@
 #    By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:27:23 by abarchil          #+#    #+#              #
-#    Updated: 2021/11/27 03:06:36 by abarchil         ###   ########.fr        #
+#    Updated: 2021/11/27 12:30:16 by abarchil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC_FILE = main.c check_map.c map_parsing.c so_long_utils.c draw_utils.c   gnl/get_next_line.c gnl/get_next_line_utils.c  ft_draw.c ft_movment.c  find_player.c SRC/*.c
+SRC_FILE = main.c check_map.c map_parsing.c so_long_utils.c draw_utils.c   gnl/get_next_line.c gnl/get_next_line_utils.c  ft_draw.c ft_movment.c  find_player.c ft_strncmp.c ft_strchar.c
 NAME = so_long
 FLAG = gcc -lmlx -framework OpenGL -framework AppKit
 CC = cc
-OBJ = $(SRC_FILE;.c=.o)
+OBJ = $(SRC_FILE:.c=.o)
 
+BLUE=\033[0;34m
+GREEN=\033[0;32m
+ORANG=\033[0;33m
 
 all : $(NAME)
 
 %.o : %.c
-	cc -c @^ -o $@
-
-$(NAME) :	$(OBJ)
-	$(FLAG) $(SRC_FILE) -o $(NAME)
+	@cc -c $< -o $@
+	@echo "$(GREEN)compiling  $@ ..."
+$(NAME) : $(OBJ)
+	@echo "$(BLUE) linking Object files..."
+	@$(FLAG) $(OBJ) -o $(NAME)
 clean :
-	rm $(OBJ)
+	@echo "$(ORANG)removing ... $(OBJ)"
+	@rm $(OBJ)
 fclean : clean
-	rm $(NAME)
+	@echo "remove $(NAME)"
+	@rm $(NAME)
 re : fclean all
 .PHONY : clean fclean all re

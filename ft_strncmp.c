@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abarchil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abarchil <abarchil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 18:35:31 by abarchil          #+#    #+#             */
-/*   Updated: 2021/11/26 23:51:53 by abarchil         ###   ########.fr       */
+/*   Updated: 2021/11/27 14:18:22 by abarchil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "../so_long.h"
+#include "so_long.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
